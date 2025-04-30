@@ -23,20 +23,11 @@ def caption_image(image):
     
 inface = gr.Interface(
     fn=caption_image,
-    inputs=gr.inputs.Image(type="pil"),
+    inputs=gr.Image(type="pil"),
     outputs="text",
     title="Image Captioning with BLIP",
     description="Upload an image to get a caption."
 
-)
-
-def greet(name, lname, intensity):
-    return "Hello " + name + lname + "!" * int(intensity)
-
-demo = gr.Interface(
-    fn=greet,
-    inputs=["text", "text", "slider"],
-    outputs=["text"]
 )
 
 inface.launch(server_name="127.0.0.1", server_port=7860)
