@@ -30,4 +30,4 @@ inface = gr.Interface(
 
 )
 
-inface.launch(server_name="127.0.0.1", server_port=7860)
+inface.launch(server_name="127.0.0.1", server_port=7860, share=True)
