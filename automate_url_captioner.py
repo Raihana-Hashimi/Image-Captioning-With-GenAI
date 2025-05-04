@@ -20,7 +20,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 img_elements = soup.find_all('img')
 
 # Open a file to write the captions
-with open("captions.txt", "w") as caption_file:
+with open("./output/captions.txt", "w") as caption_file:
     # Iterate over each img element
     for img_element in img_elements:
         img_url = img_element.get('src')
